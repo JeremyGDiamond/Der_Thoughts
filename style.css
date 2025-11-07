@@ -1,0 +1,11 @@
+body {
+  margin: 30px;
+  padding: 0;
+  background-image: url('background.gif');
+  background-repeat: repeat;                /* tile it in both directions */
+  background-attachment: fixed;             /* keeps it stationary while scrolling */
+  background-position: top left;
+  background-size: auto;                    /* don't scale — use the real pixel size */
+  background-color: #FFFFFF; 
+  height: 100vh;
+}

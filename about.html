@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about for blog to neocities cms</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+  </head>
+  <body>
+    
+    <div id="header"></div>
+
+    <h2>What am I about?</h2>    
+    
+    <div id="footer"></div>
+
+    <script>
+      // Load header and footer
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/footer.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("footer").innerHTML = data);
+      });
+    </script>
+  </body>
+</html>
+
+

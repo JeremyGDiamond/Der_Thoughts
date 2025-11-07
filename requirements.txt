@@ -1,0 +1,5 @@
+# Python dependencies
+pypandoc
+
+# System dependencies (install separately, e.g. via apt, brew, or nix):
+# pandoc

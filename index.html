@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Derivative Thoughts — The Blog of Jeremy Diamond</title>
+    <!-- The style.css file allows you to change the look of your web pages.
+         If you include the next line in all your web pages, they will all share the same look.
+         This makes it easier to make new pages for your site. -->
+    <link href="/style.css" rel="stylesheet" type="text/css" media="all">
+    
+    <link rel="alternate" 
+          type="application/rss+xml" 
+          title="Derivative Thoughts RSS Feed" 
+          href="https://derivativethoughts.neocities.org/rss.xml">
+
+    <link rel="alternate" 
+          type="application/atom+xml" 
+          title="Derivative Thoughts Atom Feed" 
+          href="https://derivativethoughts.neocities.org/rss.xml">
+  </head>
+  <body>
+     
+    <div id="header"></div>
+
+    <div id="posts"></div>
+    
+    <div id="footer"></div>
+
+    <script>
+      // Load header and footer
+      document.addEventListener("DOMContentLoaded", () => {
+        fetch("/header.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("header").innerHTML = data);
+
+        fetch("/deploy/posts.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("posts").innerHTML = data);
+
+        fetch("/footer.html")
+          .then(response => response.text())
+          .then(data => document.getElementById("footer").innerHTML = data);
+      });
+    </script>
+  
+  </body>
+</html>

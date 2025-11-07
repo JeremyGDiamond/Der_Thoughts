@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="mysite.url">
+<channel>
+  <atom:link href="mysite.url/rss.xml" rel="self" type="application/rss+xml" />
+  <title>MY SITE</title>
+  <link>mysite.url/</link>
+  <description></description>
+  <language>en-us</language>
+  <lastBuildDate>Fri, 07 Nov 2025 12:06:02 GMT</lastBuildDate>
+  <item>
+    <title>Testpost2</title>
+    <link>mysite.url/testpost2.html</link>
+    <guid isPermaLink="true">mysite.url/testpost2.html</guid>
+    <pubDate>Wed, 05 Feb 2025 00:00:00 GMT</pubDate>
+    <description><![CDATA[This is testpost 2.]]></description>
+  </item>
+  <item>
+    <title>Testpost</title>
+    <link>mysite.url/testpost.html</link>
+    <guid isPermaLink="true">mysite.url/testpost.html</guid>
+    <pubDate>Wed, 01 Jan 2025 00:00:00 GMT</pubDate>
+    <description><![CDATA[This is testpost 1.]]></description>
+  </item>
+</channel>
+</rss>

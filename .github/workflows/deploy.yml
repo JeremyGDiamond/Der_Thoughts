@@ -1,0 +1,31 @@
+name: Deploy to Neocities
+on:
+  push:
+    branches:
+      - main  # or master — whichever is your default branch
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Prepare deployment directory
+        run: |
+          mkdir -p build
+          # Copy HTML/CSS/GIF/TXT files from repo root
+          find . -maxdepth 1 -type f \( -name "*.html" -o -name "*.css" -o -name "*.gif" -o -name "*.txt" -o -name "*.xml" \) -exec cp {} build/ \;
+          # Copy deploy folder (keeping the folder structure)
+          if [ -d "deploy" ]; then
+            cp -r deploy build/
+          fi
+          # Copy fonts folder
+          if [ -d "fonts" ]; then
+            cp -r fonts build/
+          fi
+      
+      - name: Upload to Neocities
+        uses: bcomnes/deploy-to-neocities@v2
+        with:
+          api_token: ${{ secrets.NEOCITIES_API_TOKEN }}
+          dist_dir: build
