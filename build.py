@@ -86,7 +86,7 @@ for post_dir in sorted(os.listdir(POSTS_DIR)):
         "<head>",
         '<meta charset="UTF-8">',
         '<meta name="viewport" content="width=device-width, initial-scale=1.0">',
-        f"<title>{post_name.replace('-', ' ').title()} — {blog_name}/title>",
+        f"<title>{post_name.replace('-', ' ').title()} — {blog_name}</title>",
         '<link rel="stylesheet" href="/style.css">',
         "</head>",
         "<body>",
